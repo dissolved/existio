@@ -8,10 +8,10 @@ file_path = ".api_token"
 with open(file_path, "r") as file:
     TOKEN = file.read().strip()
 
-url = 'https://exist.io/api/2/attributes/with-values/'
+url = "https://exist.io/api/2/attributes/with-values/"
 
 # make sure to authenticate ourselves with our token
-response = requests.get(url, headers={'Authorization': f'Token {TOKEN}'})
+response = requests.get(url, headers={"Authorization": f"Token {TOKEN}"})
 
 if response.status_code == 200:
     data = response.json()
